@@ -1,0 +1,2934 @@
+
+<!DOCTYPE HTML>
+
+
+
+
+<html class="no-js" lang="en" dir="ltr" style="direction: ltr">
+
+<head>
+
+    <!-- Adding Polyfills -->
+
+
+    <script type="text/javascript" src="/etc.dexter.dexterlibs/dexter/clientlibs/base/headIE.fp-9c27dbb6b5dfb3777630d97928a0b00a.js" nomodule></script>
+
+
+
+
+
+    <script type="text/javascript" src="/etc.dexter.dexterlibs/dexter/clientlibs/base/headPolyfills.fp-258134ee08e77782d5665254a277a10b.js" nomodule></script>
+
+
+
+
+
+    <script type="text/javascript" src="/etc.dexter.dexterlibs/dexter/clientlibs/base/head.fp-c937fa4bc40bc5bfa71ee85819f73f9d.js"></script>
+
+
+
+    <script>
+        window.dexter = window.dexter || {};
+        window.dexter.utils = window.dexter.utils || {};
+        if (!window.IntersectionObserver) {
+            document.dispatchEvent(new Event('dexter:headPolyfillLoaded'));
+            window.dexter.utils.headPolyfill = true;
+        }
+    </script>
+    <!-- To Enable / Disable Commerce Wallet for non-dexter pages-->
+
+    <script>
+        window.helpx = window.helpx || {};
+        window.helpx.wallet = {};
+        window.helpx.wallet.isEnabled = 'true' === 'true';
+        window.helpx.wallet.env = 'production';
+        window.helpx.wallet._data = {};
+        window.helpx.wallet.isReady = () => !!window.helpx.wallet._data.clientSessionId;
+        window.helpx.wallet.getDetails = () => window.helpx.wallet._data;
+    </script>
+
+
+
+    <div class="aemPageMeta" data-commerce-lib-js='/etc.dexter.dexterlibs/helpx/clientBundles/commerce/clientlibs.fp-0e7b928c4e984dc7aad527713b2a9326.js' data-commerce-lib-css='/etc.dexter.dexterlibs/helpx/clientBundles/commerce/clientlibs.fp-01fd3a6469c06f906c6204f353766d9f.css'>
+    </div>
+
+
+
+
+
+    <script type="text/javascript">
+        window.dexter = window.dexter || {};
+        window.dexter.Analytics = window.dexter.Analytics || {};
+        window.dexter.Analytics.language = 'en_us';
+        window.dexter.Analytics.geoRegion = 'US';
+        window.dexter.Analytics.targetEnabled =
+            'disabled' !==
+            'disabled';
+    </script>
+
+
+    <script>
+        window.dexter.Analytics.launchLoaded = true;
+        window.dexter.Analytics.audienceManagerEnabled = '' !== 'disabled';
+        window.dexter.Analytics.legacyAnalytics = false;
+    </script>
+    <script>
+        window.alloy_load = window.alloy_load || {};
+        window.alloy_load.data = window.alloy_load.data || {};
+        window.alloy_all = window.alloy_all || {};
+        window.alloy_all.data = window.alloy_all.data || {};
+        window.alloy_all.data._adobe_corpnew = window.alloy_all.data._adobe_corpnew || {};
+        window.alloy_all.data._adobe_corpnew.digitalData = window.alloy_all.data._adobe_corpnew.digitalData || {};
+        window.alloy_all.data._adobe_corpnew.digitalData.page = window.alloy_all.data._adobe_corpnew.digitalData.page || {};
+        window.alloy_all.data._adobe_corpnew.digitalData.page.pageInfo = window.alloy_all.data._adobe_corpnew.digitalData.page.pageInfo || {};
+        window.alloy_all.data._adobe_corpnew.digitalData.page.pageInfo.language = window.dexter.Analytics.language;
+    </script>
+    <script>
+        launchURL = "https://assets.adobedtm.com/d4d114c60e50/a0e989131fd5/launch-5dd5dd2177e6.min.js";
+        edgeConfigId = "913eac4d-900b-45e8-9ee7-306216765cd2";
+
+        window.marketingtech = {
+            adobe: {
+                launch: {
+                    url: launchURL,
+                    controlPageLoad :true
+                },
+                alloy: {
+                    edgeConfigId: edgeConfigId
+                },
+                target: window.dexter.Analytics.targetEnabled,
+                audienceManager: window.dexter.Analytics.audienceManagerEnabled
+            },
+            sophia:true
+        }
+    </script>
+
+    <script src="https://www.adobe.com/marketingtech/main.standard.min.js"></script>
+
+
+
+    <!-- Theme through query parameter -->
+    <script>
+        function setTheme() {
+            // Set default theme
+            document.documentElement.setAttribute('theme', 'system')
+            // Set theme per query param; will override default
+            var themeQuery = window.location.search
+                .slice(1)
+                .split('&')
+                .find(function (q) {
+                    return q.indexOf('theme=') !== -1
+                })
+            if (themeQuery && themeQuery.split('=').length > 1) {
+                var theme = themeQuery.split('=')[1]
+                if (['light', 'dark'].includes(theme)) {
+                    document.documentElement.setAttribute('theme', theme)
+                }
+            }
+        }
+        setTheme()
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- /* Initialize custom Beans for Learn-support model */ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.4/bluebird.min.js" nomodule></script>
+
+
+
+
+
+
+    <!--PUBLISH STAMP
+    <properties>
+        <property>
+            <name>ServedBy</name>
+            <value>LOC PUBLISHER</value>
+        </property>
+        <property>
+            <name>ServedAt</name>
+            <value>Thu Feb 06 22:00:28 UTC 2025</value>
+        </property>
+    </properties>
+    -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--<title>Adobe Security Bulletin</title>-->
+    <title>Adobe Security Bulletin</title>
+
+
+
+
+    <link rel="dns-prefetch" href="//assets.adobedtm.com"/>
+    <link rel="dns-prefetch" href="//sstats.adobe.com"/>
+    <link rel="dns-prefetch" href="//use.typekit.com"/>
+    <link rel="dns-prefetch" href="//use.typekit.net"/>
+    <link rel="dns-prefetch" href="//wwwimages2.adobe.com"/>
+    <link rel="dns-prefetch" href="//universal.iperceptions.com"/>
+    <link rel="dns-prefetch" href="//p.typekit.net"/>
+    <link rel="dns-prefetch" href="//adobe.com"/>
+    <link rel="dns-prefetch" href="//dpm.demdex.net"/>
+    <link rel="dns-prefetch" href="//api.demandbase.com"/>
+    <link rel="dns-prefetch" href="//geo2.adobe.com"/>
+    <link rel="dns-prefetch" href="//fast.adobe.demdex.net"/>
+    <link rel="dns-prefetch" href="//static.adobelogin.com"/>
+    <link rel="dns-prefetch" href="//c.evidon.com"/>
+    <link rel="dns-prefetch" href="//l3.evidon.com"/>
+
+    <link rel="dns-prefetch" href="//adobeid-na1.services.adobe.com"/>
+    <link rel="dns-prefetch" href="//wwwimages.adobe.com"/>
+
+
+
+
+
+
+
+    <link rel="alternate" hreflang="en-IE" href="https://helpx.adobe.com/ie/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="uk-UA" href="https://helpx.adobe.com/ua/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="en-us" href="https://helpx.adobe.com/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="ar-kw" href="https://helpx.adobe.com/mena_ar/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="lv-LV" href="https://helpx.adobe.com/lv/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="ms-MY" href="https://helpx.adobe.com/my_ms/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="en-IN" href="https://helpx.adobe.com/in/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="en-ZA" href="https://helpx.adobe.com/africa/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="nl-BE" href="https://helpx.adobe.com/be_nl/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="zh-CN" href="https://helpx.adobe.com/cn/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="nl-NL" href="https://helpx.adobe.com/nl/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="hi-IN" href="https://helpx.adobe.com/in_hi/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="ar-lb" href="https://helpx.adobe.com/mena_ar/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="en-AU" href="https://helpx.adobe.com/au/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="he-IL" href="https://helpx.adobe.com/il_he/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="ja-JP" href="https://helpx.adobe.com/jp/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="de-CH" href="https://helpx.adobe.com/ch_de/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="hu-HU" href="https://helpx.adobe.com/hu/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="ar-qa" href="https://helpx.adobe.com/mena_ar/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="es-CL" href="https://helpx.adobe.com/cl/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="fr-CA" href="https://helpx.adobe.com/ca_fr/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="es-CO" href="https://helpx.adobe.com/co/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="es-PE" href="https://helpx.adobe.com/pe/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="es-LA" href="https://helpx.adobe.com/la/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="pl-PL" href="https://helpx.adobe.com/pl/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="en-NZ" href="https://helpx.adobe.com/nz/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="pt-PT" href="https://helpx.adobe.com/pt/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="ro-RO" href="https://helpx.adobe.com/ro/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="ar-il" href="https://helpx.adobe.com/mena_ar/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="ar-eg" href="https://helpx.adobe.com/mena_ar/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="fr-BE" href="https://helpx.adobe.com/be_fr/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="en-SG" href="https://helpx.adobe.com/sg/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="it-CH" href="https://helpx.adobe.com/ch_it/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="tr-TR" href="https://helpx.adobe.com/tr/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="et-EE" href="https://helpx.adobe.com/ee/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="ar-ma" href="https://helpx.adobe.com/mena_ar/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="fil-PH" href="https://helpx.adobe.com/ph_fil/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="fr-FR" href="https://helpx.adobe.com/fr/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="vi-VN" href="https://helpx.adobe.com/vn_vi/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="en-GB" href="https://helpx.adobe.com/uk/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="fi-FI" href="https://helpx.adobe.com/fi/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="nb-NO" href="https://helpx.adobe.com/no/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="en-CA" href="https://helpx.adobe.com/ca/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="lt-LT" href="https://helpx.adobe.com/lt/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="ar-AE" href="https://helpx.adobe.com/ae_ar/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="sl-SI" href="https://helpx.adobe.com/si/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="ar-iq" href="https://helpx.adobe.com/mena_ar/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="de-AT" href="https://helpx.adobe.com/at/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="fr-CH" href="https://helpx.adobe.com/ch_fr/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="bg-BG" href="https://helpx.adobe.com/bg/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="cs-CZ" href="https://helpx.adobe.com/cz/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="ar-SA" href="https://helpx.adobe.com/sa_ar/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="de-DE" href="https://helpx.adobe.com/de/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="zh-TW" href="https://helpx.adobe.com/tw/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="zh-HK" href="https://helpx.adobe.com/hk_zh/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="pt-BR" href="https://helpx.adobe.com/br/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="ko-KR" href="https://helpx.adobe.com/kr/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="sk-SK" href="https://helpx.adobe.com/sk/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="es-ES" href="https://helpx.adobe.com/es/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="ar-jo" href="https://helpx.adobe.com/mena_ar/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="es-MX" href="https://helpx.adobe.com/mx/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="it-IT" href="https://helpx.adobe.com/it/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="ar-om" href="https://helpx.adobe.com/mena_ar/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="ru-RU" href="https://helpx.adobe.com/ru/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="es-AR" href="https://helpx.adobe.com/ar/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="sv-SE" href="https://helpx.adobe.com/se/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="id-ID" href="https://helpx.adobe.com/id_id/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="da-DK" href="https://helpx.adobe.com/dk/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="de-LU" href="https://helpx.adobe.com/lu_de/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="fr-LU" href="https://helpx.adobe.com/lu_fr/security/products/magento/apsb20-02.html"/>
+
+
+    <link rel="alternate" hreflang="th-TH" href="https://helpx.adobe.com/th_th/security/products/magento/apsb20-02.html"/>
+
+
+
+    <link rel="alternate" hreflang="x-default" href="https://helpx.adobe.com/security/products/magento/apsb20-02.html"/>
+
+
+
+
+
+
+    <script>
+        if (typeof (AdobeLearn) === "undefined") AdobeLearn = {};
+        if (typeof (AdobeLearn.Locale) === "undefined") AdobeLearn.Locale = {};
+        if (typeof (AdobeLearn.Config) === "undefined") AdobeLearn.Config = {};
+
+        AdobeLearn.Locale["pageLocale"] = 'en_us';
+        AdobeLearn.Locale["pageLanguage"] = 'en';
+        AdobeLearn.Locale["pageCountry"] = 'US';
+        AdobeLearn.Locale["nonEmptyUrlLocale"] = 'en';
+        AdobeLearn.Locale["urlLocale"] = '';
+        AdobeLearn.Locale["folderLocale"] = 'en';
+        AdobeLearn.Locale["contentUrl"] = '\/';
+        AdobeLearn.Locale["contentFolder"] = '\/content\/help\/en\/';
+        AdobeLearn.Locale["datetimeLocale"] = 'en';
+        AdobeLearn.Locale["datetimeFormat"] = 'MMM. dd, yyyy';
+        AdobeLearn.Locale["parentLocale"] = '';
+        AdobeLearn.Locale["fiveLetterLocale"] = 'en_US';
+        AdobeLearn.Locale["globalNavLocale"] = 'en_us';
+        AdobeLearn.Locale["customPageLocale"] = 'en_US';
+        AdobeLearn.Locale["customPageLanguage"] = 'en';
+        AdobeLearn.Config["tier"] = 'PROD';
+        AdobeLearn.Config["serverType"] = 'external';
+        AdobeLearn.Config["externalLoadBalancer"] = 'https:\/\/helpx.adobe.com';
+        AdobeLearn.Config["author"] = 'false';
+        AdobeLearn.Config["author-preview"] = 'false';
+        AdobeLearn.Config["authorPrefix"] = '/content/help/en';
+        AdobeLearn.Locale["relativePath"] = '/';
+        AdobeLearn.Config["isHelpx"] = 'true';
+        AdobeLearn.Config["pageTemplate"] = 'help/components/pages/article-3';
+        AdobeLearn.Locale["bcpCode"] = 'en-us';
+    </script>
+
+
+
+
+
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9,10"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Content-Locale" content="en_US"/>
+    <meta http-equiv="Content-Language" content="en"/>
+    <meta http-equiv="Cache-Control" content="public"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+
+
+
+
+
+    <meta name="robots" content="noodp, FOLLOW, INDEX"/>
+
+    <!-- No google featured snippets  -->
+
+
+    <!-- SEO title / Title -->
+    <meta name="title" content="Adobe Security Bulletin"/>
+    <!-- SEO description / Description -->
+    <meta name="description" content="Security Updates Available for Magento | APSB20-02"/>
+    <!-- Experience Level -->
+    <meta name="targetAudience"/>
+    <!-- Learning Approach (content-type)  -->
+    <meta name="learningApproach"/>
+    <!-- Search phrases / keywords  -->
+    <meta name="keywords" content="Digital Editions"/>
+    <!-- Geo  -->
+    <meta name="Content-Locale" content="en_US"/>
+    <!-- Language  -->
+    <meta name="Content-Language" content="en"/>
+
+    <meta name="publishDate" content="2020-01-28T16:18:27.477Z"/>
+    <!-- Published URL  -->
+    <meta name="publishExternalUrl" content="https://helpx.adobe.com/security/products/magento/apsb20-02.html"/>
+    <!-- Landing Page -->
+    <meta name="sling:resourceType" content="help/components/pages/article-3"/>
+    <!-- Salesforce Article Group -->
+    <meta name="articleGroup" content="security/products/magento/apsb20-02.html"/>
+    <!-- Creative field -->
+    <meta name="creativeField"/>
+
+
+
+
+
+
+
+    <meta name="productJcrID" content="products:SG_SECURITY"/>
+
+    <meta name="primaryProductName" content="Security"/>
+
+    <meta name="product" content="digitaleditions"/>
+
+    <meta name="productNames" content="Digital Editions"/>
+
+
+
+
+    <!-- First Published Live Date-->
+    <meta name="firstPublishedLive" content="2018-10-09T13:55:22.478Z"/>
+    <!-- Other misc dates -->
+    <meta name="creationDate" content="2013-11-11T06:38:51.767-08:00"/>
+    <meta name="lastModifiedDate" content="2020-01-28T16:18:27.478Z"/>
+
+
+    <meta name="pageCreatedAt" content="/content/help/en/security/products/magento/apsb20-02"/>
+
+    <meta name="translated" content="false"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="serp-content-type" content="help"/>
+
+
+
+
+
+    <link rel="canonical" href="https://helpx.adobe.com/security/products/magento/apsb20-02.html"/>
+
+    <!-- favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+
+
+
+    <link rel="stylesheet" href="https://use.typekit.net/pps7abe.css"/>
+
+
+
+
+
+
+
+    <!--
+   * ScriptName: /shared/clickjacking.ssi
+   *  Important: Do not edit this file directly.
+   *             Edit the source in git: /apps/help/helpx/shared/clickjacking.ssi
+  -->
+    <style>
+        body.locale_zh_CN div.article-footer div#askthecommunity {
+            visibility:hidden;
+        }
+    </style>
+    <style id="antiClickjack">body{display:none !important;}</style>
+
+    <script type="text/javascript">
+
+        var pageIsIframed = window.self !== window.top;
+        var isPartnerDomain = false;
+        var partnerDomains = [
+            new RegExp('https:\/\/.*\.adobe\.com'),                   // adobe.com (this one had a problem http://regexr.com/3gfmk)
+            new RegExp('https:\/\/adobe\.com'),                       // all adobe subdomains
+            new RegExp('https:\/\/.*\.adobecc\.com'),                 // adobecc.com
+            new RegExp('https:\/\/adobecc\.com'),                     //
+            new RegExp('https:\/\/echosign\.com'),                    // echosign.com
+            new RegExp('https:\/\/.*\.echosign\.com'),                // subdomains.echosign.com
+            new RegExp('https:\/\/.*\.echocdn\.com'),                 // subdomains.echocdn.com (MWPW-30824)
+            new RegExp('https:\/\/.*\.echocdnstage\.com'),            // subdomains.echocdnstage.com (MWPW-30824)
+            new RegExp('https:\/\/.*\.echocdnawspreview\.com'),       // subdomains.echocdnawspreview.com (MWPW-30824)
+            new RegExp('https:\/\/.*\.echosignawspreview\.com'),      // subdomains.echosignawspreview.com
+            new RegExp('https:\/\/.*\.echosignstage\.com'),           // subdomains.echosignstage.com
+            new RegExp('https:\/\/.*\.echosigndemo\.com'),            // subdomains.echosigndemo.com
+            new RegExp(':\/\/adobe\.lookbookhq\.com')                 // MWPW-24834
+        ];
+
+        // When this page is first is loaded in an iframe, the document.referrer == the parent url
+        // which contains the iframe el (should be a partner domain). As the user navigates within that
+        // iframe, the document.referrer will be from iframe's own domain (should also match a partner domain).
+        var parentDomain = document.createElement("a");
+        parentDomain.href = document.referrer;
+        parentDomain = parentDomain.protocol + '//' + parentDomain.hostname;
+        partnerDomains.forEach(function(partnerDomain) {
+            if(parentDomain.match(partnerDomain)){
+                isPartnerDomain = true;
+            }
+        });
+
+        if (!pageIsIframed || isPartnerDomain) {
+            var d = document.getElementById('antiClickjack');
+            d.parentNode.removeChild(d);
+        }
+
+        if (pageIsIframed && parentDomain.indexOf('force') !== -1) {
+            // Is a salesforce page which holds this iframe
+            // hide feedback pod
+            var feedbackPod = document.getElementById('feedbackPod');
+            if (typeof(feedbackPod) != 'undefined' && feedbackPod != null) {
+                feedbackPod.style.display = "none";
+            }
+        }
+    </script>
+
+
+    <script>
+        if (typeof DEBUG == "undefined" ) {
+            var DEBUG = (location.href.indexOf("debug=true")) > 0 ? true : false;
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="/etc.dexter.dexterlibs/dexter/clientlibs/base/theme.fp-388657408154b9b3bd7da382da7ed099.css" type="text/css">
+
+
+
+
+    <link rel="stylesheet" href="/etc.dexter.dexterlibs/dexter/clientlibs/base/publish.fp-3f9367803988983eab8eb6fdec923ee4.css" type="text/css">
+
+
+
+
+    <link rel="stylesheet" href="/etc.dexter.dexterlibs/helpx/clientBundles/helpxTools/clientlibs.fp-72e69e6ff29f42a9c3a22a3ae42de0af.css" type="text/css">
+
+
+
+
+
+    <link rel="stylesheet" href="/etc.dexter.dexterlibs/helpx/clientBundles/asdeSearchBar/clientlibs.fp-c4a24db05d229966e9bb9e95807257d5.css" type="text/css">
+
+
+
+
+
+
+
+    <!-- /components/pages/article-3/linkprojectoverride.html -->
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="/etc.dexter.dexterlibs/help/components/pages/article-3/clientlibs.fp-a03bdac35e5bf2c4afdada09c118934d.css" type="text/css">
+
+
+
+
+    <!--  Empty placeholder for search -->
+    <script>
+        var product = "";
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        var gnavExp = 'acom/cc-mega-menu/cc-overview-localnav';
+        var disableSearchTemplates = ['helpx/components/structure/helpxMain','helpx/components/structure/helpxMain-searchResults'];
+        if(URLSearchParams){
+            var searchParams = new URLSearchParams(window.location.href);
+            gnavExp = searchParams.get('gnavExp') || gnavExp;
+        }
+        var disableGnavTarget = 'true' === "true";
+
+        window.fedsConfig = {
+            locale: 'en',
+            disableSticky: true,
+            disableTarget: disableGnavTarget,
+            content: {
+                experience: gnavExp,
+            },
+            subnav: {},
+            footer: {
+                regionModal: function () { window.location.hash = 'languageNavigation'; }
+            },
+            breadcrumbs: {
+                showLogo: true,
+                links: []
+            },
+            privacy: {
+                otDomainId: '7a5eb705\u002D95ed\u002D4cc4\u002Da11d\u002D0cc5760e93db' || '7a5eb705-95ed-4cc4-a11d-0cc5760e93db-test',
+                footerLinkSelector: '[data\u002Dfeds\u002Daction=\x22open\u002Dadchoices\u002Dmodal\x22]'
+            },
+            search: {
+                context: '',
+            },
+            oneTapLogin: false,
+            oneTapRedirectURL: '',
+            universalNav: true,
+            universalNavComponents: 'profile,notifications,appswitcher',
+            disableSearch: disableSearchTemplates.indexOf('help/components/pages/article-3') !== -1
+        };
+
+        (function() {
+            const gnavExperience = document.querySelector('div[data-param-key]');
+
+            if (gnavExperience === null) return;
+            if (window.location.search === '') return;
+
+            const key = gnavExperience.getAttribute('data-param-key');
+            const val = gnavExperience.getAttribute('data-param-val');
+            const exp = gnavExperience.getAttribute('data-experience');
+            const queryParams = window.location.search.substring(1);
+            const keyValPairs = queryParams.split('&');
+            const containsParams = keyValPairs.filter(function(pair) {
+                const splitPair = pair.split('=');
+                return splitPair[0] === key && splitPair[1] === val;
+            });
+
+            if (!containsParams.length) return;
+
+            if (window.fedsConfig && window.fedsConfig.content && window.fedsConfig.content.experience) {
+                window.fedsConfig.content.experience = exp;
+            }
+        })();
+
+    </script>
+
+
+    <script>
+        window.dexter = window.dexter || {};
+        window.dexter.jarvis = {
+            isDesktop: (window.dexter.personalization && window.dexter.personalization.technology && window.dexter.personalization.technology.platform && window.dexter.personalization.technology.platform.type) ? window.dexter.personalization.technology.platform.type === 'desktop' : false
+        };
+        window.dexter.jarvis.desktopEnabled = window.dexter.jarvis.isDesktop && true,
+            window.dexter.jarvis.mobileEnabled = !window.dexter.jarvis.isDesktop && true,
+            window.dexter.jarvis.surfaceName = 'helpx-default',
+            window.dexter.jarvis.surfaceVersion = '1.0',
+            window.dexter.jarvis.onReady = function (newChatEnabled, jarvisData) {
+                if (newChatEnabled) {
+                    if (typeof (enableLE) == 'function') { enableLE() };
+                } else {
+                    if (typeof (enableLP) == 'function') { enableLP() };
+                }
+            },
+            window.dexter.jarvis.onError = function () {
+                if (typeof (enableLP) == 'function') { enableLP() };
+            },
+            window.dexter.jarvis.openExistingChat = function () {
+                if (typeof (enableLP) == 'function') { enableLP() };
+            },
+            window.dexter.jarvis.getContext = (window.dexter && window.dexter.callbacks) ? window.dexter.callbacks.getContext : null
+    </script>
+
+
+
+    <script>
+        window.fedsConfig = window.fedsConfig || {};
+        if (window.dexter.jarvis.desktopEnabled || window.dexter.jarvis.mobileEnabled) {
+            window.fedsConfig.jarvis = {
+                surfaceName: 'helpx-default',
+                surfaceVersion: '1.0',
+                onReady: function (newChatEnabled, jarvisData) {
+                    // Works for older templates
+                    // Disabled for new templates
+                    if (typeof (enableLE) == 'function') { enableLE(); }
+                },
+                onError: function () {
+                    // Works for older templates
+                    // Disabled for new templates
+                    if (typeof (enableLP) == 'function') { enableLP(); }
+                },
+                openExistingChat: function () {
+                    // Works for older templates
+                    // Disabled for new templates
+                    if (typeof (enableLP) == 'function') { enableLP(); }
+                },
+                getContext: (window.dexter && window.dexter.callbacks) ? window.dexter.callbacks.getContext : null,
+                directConfig: {
+                    lazyLoad: true
+                }
+            }
+        }
+    </script>
+
+    <script src="https://www.adobe.com/etc.clientlibs/globalnav/clientlibs/base/feds.js" id="feds-script"></script>
+
+
+
+    <style id="feds-style-page-load">
+
+        .globalNavHeader {
+            height: 64px;
+        }
+
+
+        @media screen and (min-width: 600px) {
+            .globalNavHeader {
+                height: 64px;
+            }
+        }
+
+
+        @media screen and (min-width: 1200px) {
+            .globalNavHeader {
+                height: 64px;
+            }
+        }
+    </style>
+    <script>
+        (function () {
+            function f() {
+                var scriptEl = document.getElementById("feds-style-page-load");
+                if (scriptEl) {
+                    scriptEl.remove();
+                }
+            }
+            if (feds && feds.events && feds.events.experience) {
+                f();
+            } else {
+                window.addEventListener("feds.events.experience.loaded", f, { once: true });
+            }
+        })();
+    </script>
+
+
+
+    <script type="text/javascript">
+        window.helpx = window.helpx || {};
+        window.helpx.search = window.helpx.search || {};
+        window.helpx.search.enableAsdeSearch = 'true' === 'true';
+        if (window.helpx.search.enableAsdeSearch) {
+            window.feds?.utilities?.getUserApplications();
+        }
+    </script>
+
+    <script type="text/javascript">
+        window.showHelpxCommerceModal = 'true' === 'true';
+    </script>
+
+    <script src="https://prod.adobeccstatic.com/asde/v3.6.4/asde.min.js"></script>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <defs><radialGradient id="a" cx="606.268" cy="16071" r="2384.688" gradientTransform="matrix(1 0 0 -1 -5.5 16215)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ed1c24"></stop><stop offset="1" stop-color="#84191b"></stop></radialGradient></defs>
+        <symbol id="spectrum-icon-.-spectrum-icons-color"></symbol>
+    </svg>
+</head>
+
+
+
+
+<!-- ae and il are conditions for Anuvaad -->
+
+
+<body class=" lang_en locale_en_US    ">
+
+
+
+
+
+
+
+
+<div id="page-header" class="globalNavHeader">
+
+
+
+
+
+
+
+    <div>
+        <div id="feds-header" data-hide-jarvis="false"></div>
+
+    </div>
+
+
+
+
+
+    <div id="commerce-wallet-banner-target" daa-im="true" daa-lh="Top Banner" daa-level="1"></div>
+
+
+
+
+
+
+
+
+
+    <div id="title-bar" class="titlebar">
+        <div class="container clearfix">
+
+
+            <h1 class="page-title ">Adobe Security Bulletin</h1>
+
+            <div class="back-to-search"><span>Search</span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <script>
+                var usseEndpoint = 'https://adobesearch.adobe.io/autocomplete/completions';
+                var usseApiKey = 'helpxcomprod';
+                var usseRedirectUrl = '/search.html';
+                var usseAutocompleteLocales = 'en,fr,de,ja';
+            </script>
+            <script type="text/javascript">
+                window.helpx = window.helpx || {};
+                window.helpx.search = window.helpx.search || {};
+                window.helpx.search.enableAsdeSearch = 'true' === 'true';
+                window.usseInfo = window.usseInfo || {};
+                window.usseInfo.redirectUrl = '' ? '' :'/search.html';
+
+            </script>
+
+            <!-- USS search container -->
+
+
+            <!-- USS search container ASDE Enabled -->
+
+
+            <div id="search-container" class="no-toggle" data-place-holder-text="Search Adobe Support" data-api-version="1.0.0" data-api-key="CCSearchHelpX" data-client-name="Helpx" data-surface-key="CCWeb" data-feature-flags="temp_enable_search_history_server,temp_enable_search_auto_suggestion_server_uss,temp_enable_jump_urls,ccsearch_enable_ui_logger, ccsearch_enable_ui_logger_splunk, ccsearch_enable_ui_logger_console_prod,ccsearch_enable_geo_service, ccsearch_enable_sort_dropdown,ccsearch_enable_uss_contextual_parameters, ccsearch_enable_uss_auto_complete_contextual_parameters, ccsearch_enable_libraries_mosaic_rendition, enable_lib_elements,ccsearch_enable_fileType_service, ccsearch_enable_spillover_menu, ccsearch_enable_floodgate_service" data-env="prod">
+                <div id="search-section" data-in-lh="Search"></div>
+                <button class="toggle-icon" hidden></button>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- /* User Guide Navigation Band */ -->
+
+
+
+    <div class="userguide-outer-nav-container">
+        <div class="container">
+            <a class="breadcrumb-ug-link">
+                <div class="breadcrumb-home">
+                    <div class="product-name">
+
+                        User Guide
+
+                        <!--User Guide-->
+                    </div>
+                </div>
+            </a>
+            <span class="divider"></span>
+            <div class="article-container">
+                <a class="current-article"></a>
+            </div>
+            <div class="select-article-container" data-back-to-topic="Back to Topic">
+                <div class="select-article">
+                    <label>
+                        <div class="selectbox">
+                            <div class="article-dropdown">
+                                <span id="article-ug-nav-label">Select an article:</span>
+                                <button aria-haspopup="listbox" aria-labelledby="article-ug-nav-label article-ug-nav-button" id="article-ug-nav-button">Select an article:</button>
+                            </div>
+                            <ul id="article-ug-nav-options-list" class="options hidden" tabindex="-1" role="listbox" aria-labelledby="article-ug-nav-label"></ul>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<article>
+
+
+
+    <div class="grid-row container">
+
+        <div class="article-content clearfix">
+            <div id="sidebar" class="grid-cols-3 ">
+                <div>
+                    <div class="on-this-page">
+                        <p class="on-this-page-heading">On this page</p>
+                        <ul class="list-mini-toc">
+                            <li class="tocH2">
+                                <a href="#Summary">Summary</a>
+                            </li>
+
+                            <li class="tocH2">
+                                <a href="#AffectedVersions">Affected Versions</a>
+                            </li>
+
+                            <li class="tocH2">
+                                <a href="#solution">Solution</a>
+                            </li>
+
+                            <li class="tocH2">
+                                <a href="#Vulnerabilitydetails">Vulnerability details</a>
+                            </li>
+
+                            <li class="tocH2">
+                                <a href="#Acknowledgments">Acknowledgments</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div>
+                        <div id="applies-to">
+                            <div>Applies to: <span class="product-list">
+               <span>Digital Editions</span>
+            </span>
+                            </div>
+                        </div>
+                    </div></div>
+
+                <div class="article-publish-date">
+                    <label class="publish-label" data-last-published="Last Published:"></label>
+                    <span class="publish-date"></span>
+                </div>
+                <!--
+                  *** Important: Do not edit this file directly.
+                      Edit the source in git (day9): /apps/help/helpx/shared/article-3/promo.ssi
+                -->
+                <!-- /shared/article-3/promo.ssi -->
+                <style>
+                    #chinese-disclaimer {
+                        display: none;
+                        border: solid 2px #f53c3c;
+                        border-radius: 4px;
+                        margin-top: 30px;
+                        padding: 4px 16px 4px 16px;
+                        font-weight: 600;
+                        line-height: 20px;
+                    }
+                    #chinese-disclaimer .warning-icon {
+                        float:right;
+                        width: 16px;
+                        height: 16px;
+                        margin: 13px 0 10px 10px;
+                    }
+                    #sidebar.show-chinese-disclaimer {
+                        padding-bottom: 80px !important;
+                    }
+                    #sidebar.show-chinese-disclaimer #chinese-disclaimer {
+                        display: block;
+                    }
+                </style>
+
+                <div id="chinese-disclaimer">
+                    <span class="warning-icon"><img src="/shared/article-3/alert.svg"></span>
+                    <p>某些 Creative Cloud 应用程序、服务和功能在中国不可用。</p>
+                </div>
+
+                <script>
+                    (function() {
+                        function showChineseDisclaimer(json){
+                            var isChinese = document.getElementsByTagName("body")[0].classList.contains('locale_zh_CN');
+                            if (isChinese || location.search.indexOf('showChineseDisclaimer=true') > 0) {
+                                document.getElementById("sidebar").classList.add("show-chinese-disclaimer")
+                            }
+                        }
+                        document.addEventListener("DOMContentLoaded", showChineseDisclaimer);
+                    })();
+                </script>
+                <!-- script src="https://geo2.adobe.com/json/?callback=showChineseDisclaimer"></script -->
+                <!-- Adobe MAX 2019 -->
+                <p class="promo-asurion" style="display:none; margin-top:20px;"><a href="https://asurion.com/adobe/?utm_source=adobe&utm_medium=bannerad&utm_campaign=adobesupport" target="_blank"><img src="/shared/article-3/asurion_banner_final.jpg"></a></p>
+
+                <script>
+                    var pagesForAsurion = [
+                        "/creative-cloud/kb/troubleshoot-download-install-logs.html",
+                        "/download-install/kb/common-network-connectivity-issues.html",
+                        "/photoshop/system-requirements.html",
+                        "/creative-cloud/system-requirements.html",
+                        "/x-productkb/policy-pricing/activation-network-issues.html",
+                        "/creative-cloud/kb/creative-cloud-app-doesnt-open.html",
+                        "/download-install/kb/close-conflicting-processes.html",
+                        "/acrobat/system-requirements.html",
+                        "/premiere-pro/system-requirements.html",
+                        "/x-productkb/multi/drivers-video-win-nvidia.html",
+                        "/illustrator/system-requirements.html",
+                        "/x-productkb/multi/drivers-video-win-intel.html",
+                        "/download-install/kb/troubleshoot-licensing-activation.html",
+                        "/lightroom-cc/system-requirements.html",
+                        "/lightroom-classic/system-requirements.html",
+                        "/after-effects/system-requirements.html",
+                        "/photoshop/kb/photoshop-cc-gpu-card-faq.html",
+                        "/photoshop/kb/troubleshoot-gpu-graphics-card.html",
+                        "/download-install/kb/error_on_launch.html",
+                        "/lightroom-classic/kb/lightroom-gpu-faq.html",
+                        "/premiere-pro/kb/gpu-and-gpu-driver-requirements-for-premiere-pro.html",
+                        "/illustrator/kb/gpu-performance-preview-improvements.html",
+                        "/illustrator/kb/illustrator-gpu-performance-driver-update.html",
+                        "/illustrator/kb/illustrator-cc-crash-wacom-drivers.html",
+                        "/x-productkb/multi/gpu-acceleration-and-hardware-encoding.html",
+                        "/illustrator/kb/gpu-performance-errors-troubleshooting-workarounds.html"
+                    ];
+
+                    var elem = document.getElementsByClassName('promo-asurion')[0];
+                    if (elem) {
+                        for (var i = 0; i < pagesForAsurion.length; i++) {
+                            if (location.pathname.indexOf(pagesForAsurion[i]) > -1 && AdobeLearn.Locale["pageLocale"] == "en_us") {
+                                elem.style.display = 'block';
+                            }
+                        };
+                    }
+
+                </script>
+
+
+
+
+
+            </div>
+
+            <div id="main-content" class="grid-cols-8">
+
+
+                <!-- version component -->
+                <div class="aem-version">
+
+                </div>
+
+
+                <div class="page-description">
+                    Security Updates Available for Magento | APSB20-02
+                </div>
+
+
+                <div><div class="table parbase section">
+
+
+
+
+
+                    <a name="main-pars_table_2074454782"></a>
+                    <table width="100%" cellspacing="0" cellpadding="1" border="1">
+                        <tbody><tr><td>Bulletin ID</td>
+                            <td>Date Published</td>
+                            <td>Priority</td>
+                        </tr><tr><td>APSB20-02</td>
+                            <td>&nbsp;January 28, 2020</td>
+                            <td>2</td>
+                        </tr></tbody></table>
+                </div>
+                    <div class="header parbase section">
+
+
+
+                        <a name="main-pars_header"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="header  header-top">
+                            <h2 id="Summary">
+                                Summary
+                            </h2>
+
+
+
+
+                        </div>
+                        <!-- for Cascading Toc -->
+
+
+
+
+
+
+                    </div>
+                    <div class="text parbase section">
+
+                        <a name="main-pars_text_3"></a>
+
+
+                        <div class="text"><p>Magento has released updates for Magento Commerce and Open Source editions.&nbsp; These updates resolve critical and important&nbsp;vulnerabilities.&nbsp; Successful exploitation could lead to arbitrary code execution.&nbsp; &nbsp;&nbsp;</p>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="header parbase section">
+
+
+
+                        <a name="main-pars_header_0"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="header  header-top">
+                            <h2 id="AffectedVersions">
+                                Affected Versions
+                            </h2>
+
+
+
+
+                        </div>
+                        <!-- for Cascading Toc -->
+
+
+
+
+
+
+                    </div>
+                    <div class="table parbase section">
+
+
+
+
+
+                        <a name="main-pars_table"></a>
+                        <table cellspacing="0" cellpadding="1" border="1">
+                            <tbody><tr><th width="40%"><span style="font-weight: normal;"><b>Product</b></span></th>
+                                <th scope="col"><span style="font-weight: normal;"><b>Version</b></span></th>
+                                <th><span style="font-weight: normal;"><b>Platform</b></span></th>
+                            </tr><tr><td>Magento Commerce&nbsp;<br>
+                            </td>
+                                <td>2.3.3 and earlier versions&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>All</td>
+                            </tr><tr><td>Magento Open Source&nbsp; &nbsp;<br>
+                            </td>
+                                <td>2.3.3 and earlier versions&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>All<br>
+                                </td>
+                            </tr><tr><td>Magento Commerce&nbsp;<br>
+                            </td>
+                                <td>2.2.10 and earlier versions&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>All<br>
+                                </td>
+                            </tr><tr><td>Magento Open Source&nbsp;&nbsp;<br>
+                            </td>
+                                <td>2.2.10 and earlier versions&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>All<br>
+                                </td>
+                            </tr><tr><td>Magento Enterprise Edition&nbsp; &nbsp;&nbsp;<br>
+                            </td>
+                                <td>1.14.4.3 and earlier versions&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>All<br>
+                                </td>
+                            </tr><tr><td>Magento Community Edition&nbsp; &nbsp;<br>
+                            </td>
+                                <td>1.9.4.3 and earlier versions&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>All<br>
+                                </td>
+                            </tr></tbody></table>
+                    </div>
+                    <div class="header parbase section">
+
+
+
+                        <a name="main-pars_header_2"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="header  header-top">
+                            <h2 id="solution">
+                                Solution
+                            </h2>
+
+
+
+
+                        </div>
+                        <!-- for Cascading Toc -->
+
+
+
+
+
+
+                    </div>
+                    <div class="text parbase section">
+
+                        <a name="main-pars_text_6"></a>
+
+
+                        <div class="text"><p>Adobe categorizes these updates with the following <a href="https://helpx.adobe.com/security/severity-ratings.html">priority ratings</a> and recommends users update their installation to the newest version.</p>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="table parbase section">
+
+
+
+
+
+                        <a name="main-pars_table_1550848172"></a>
+                        <table width="100%" cellspacing="0" cellpadding="1" border="1">
+                            <tbody><tr><td>Product</td>
+                                <td>Version</td>
+                                <td>Platform</td>
+                                <td>Priority Rating</td>
+                                <td>Availability</td>
+                            </tr><tr><td style="text-align: left;" valign="middle">Magento Commerce&nbsp; &nbsp;&nbsp;<br>
+                            </td>
+                                <td style="text-align: left;" valign="middle">2.3.4</td>
+                                <td>All</td>
+                                <td>2</td>
+                                <td><a disablelinktracking="false" href="https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-4-commerce.html">2.3.4 Commerce</a></td>
+                            </tr><tr><td>Magento Open Source&nbsp; &nbsp;&nbsp;<br>
+                            </td>
+                                <td>2.3.4</td>
+                                <td>All<br>
+                                </td>
+                                <td>2<br>
+                                </td>
+                                <td><a disablelinktracking="false" href="https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-4-open-source.html">2.3.4 Open Source</a></td>
+                            </tr><tr><td>Magento Commerce&nbsp; &nbsp;&nbsp;<br>
+                            </td>
+                                <td>2.2.11</td>
+                                <td>All<br>
+                                </td>
+                                <td>2<br>
+                                </td>
+                                <td><a disablelinktracking="false" href="https://devdocs.magento.com/guides/v2.2/release-notes/release-notes-2-2-11-commerce.html">2.2.11 Commerce</a></td>
+                            </tr><tr><td>Magento Open Source&nbsp; &nbsp;&nbsp;<br>
+                            </td>
+                                <td>2.2.11</td>
+                                <td>All<br>
+                                </td>
+                                <td>2<br>
+                                </td>
+                                <td><a disablelinktracking="false" href="https://devdocs.magento.com/guides/v2.2/release-notes/release-notes-2-2-11-open-source.html">2.2.11 Open Source</a></td>
+                            </tr><tr><td>Magento Enterprise Edition&nbsp; &nbsp;&nbsp;<br>
+                            </td>
+                                <td>1.14.4.4</td>
+                                <td>All<br>
+                                </td>
+                                <td>2<br>
+                                </td>
+                                <td><a disablelinktracking="false" href="https://devdocs.magento.com/guides/m1x/ce19-ee114/ee1.14_release-notes.html">1.14.4 EE</a></td>
+                            </tr><tr><td>Magento Community Edition&nbsp; &nbsp;&nbsp;<br>
+                            </td>
+                                <td>1.9.4.4</td>
+                                <td>All<br>
+                                </td>
+                                <td>2<br>
+                                </td>
+                                <td><a disablelinktracking="false" href="https://devdocs.magento.com/guides/m1x/ce19-ee114/ce1.9_release-notes.html">1.9.4.4 CE</a></td>
+                            </tr></tbody></table>
+                    </div>
+                    <div class="header parbase section">
+
+
+
+                        <a name="main-pars_header_3"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="header  header-top">
+                            <h2 id="Vulnerabilitydetails">
+                                Vulnerability details
+                            </h2>
+
+
+
+
+                        </div>
+                        <!-- for Cascading Toc -->
+
+
+
+
+
+
+                    </div>
+                    <div class="table parbase section">
+
+
+
+
+
+                        <a name="main-pars_table_905538716"></a>
+                        <table width="100%" cellspacing="0" cellpadding="1" border="1">
+                            <tbody><tr><td>Vulnerability Category</td>
+                                <td>Vulnerability Impact</td>
+                                <td>Severity</td>
+                                <td><b>Magento Bug ID</b>&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>CVE Numbers</td>
+                            </tr><tr><td>Stored cross-site scripting&nbsp; &nbsp;&nbsp;<br>
+                            </td>
+                                <td>Sensitive information disclosure&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>Important</td>
+                                <td>PRODSECBUG-2543&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>CVE-2020-3715&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                            </tr><tr><td>Stored cross-site scripting&nbsp; &nbsp;&nbsp;<br>
+                            </td>
+                                <td>Sensitive information disclosure&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>Important&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>PRODSECBUG-2599<br>
+                                </td>
+                                <td>CVE-2020-3758<br>
+                                </td>
+                            </tr><tr><td>Deserialization of untrusted data&nbsp; &nbsp;&nbsp;<br>
+                            </td>
+                                <td>Arbitrary code execution&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>Critical&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>PRODSECBUG-2579<br>
+                                </td>
+                                <td>CVE-2020-3716<br>
+                                </td>
+                            </tr><tr><td>Path traversal&nbsp; &nbsp;&nbsp;<br>
+                            </td>
+                                <td>Sensitive information disclosure&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>Important&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>PRODSECBUG-2632<br>
+                                </td>
+                                <td>CVE-2020-3717<br>
+                                </td>
+                            </tr><tr><td>Security bypass&nbsp; &nbsp;&nbsp;<br>
+                            </td>
+                                <td>Arbitrary code execution&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>Critical&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>PRODSECBUG-2633<br>
+                                </td>
+                                <td>CVE-2020-3718<br>
+                                </td>
+                            </tr><tr><td>SQL injection&nbsp; &nbsp;&nbsp;<br>
+                            </td>
+                                <td>Sensitive information disclosure&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>Critical&nbsp; &nbsp;&nbsp;<br>
+                                </td>
+                                <td>PRODSECBUG-2660<br>
+                                </td>
+                                <td>CVE-2020-3719<br>
+                                </td>
+                            </tr></tbody></table>
+                    </div>
+                    <div class="header parbase section">
+
+
+
+                        <a name="main-pars_header_1"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="header  header-top">
+                            <h2 id="Acknowledgments">
+                                Acknowledgments
+                            </h2>
+
+
+
+
+                        </div>
+                        <!-- for Cascading Toc -->
+
+
+
+
+
+
+                    </div>
+                    <div class="text parbase section">
+
+                        <a name="main-pars_text_0"></a>
+
+
+                        <div class="text"><p>Adobe would like to thank the following individuals and organizations for reporting the relevant issues and for working with Adobe to help protect our customers:&nbsp;&nbsp;&nbsp;</p>
+                            <p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ernesto Martin (CVE-2020-3715)</p>
+                            <p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Blaklis (CVE-2020-3716, CVE-2020-3717, CVE-2020-3718)</p>
+                            <p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Luke Rodgers (CVE-2020-3719)</p>
+                            <p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Djordje Marjanovic (CVE-2020-3758)</p>
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="related-links">
+                    <div>
+
+                        <div></div>
+
+
+
+
+
+
+
+
+
+                    </div>
+
+                </div>
+
+                <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var pathToMoreHelp = "";
+    var displayAemVersionString = "false";
+</script>
+
+<script>
+    var communityLink = "https:\/\/community.adobe.com\/";
+    var contactLink = "\/contact.html";
+</script>
+<footer>
+    <div class="article-footer">
+        <div class="grid-container container">
+            <div class="grid-row">
+
+                <div class="grid-cols-6 hotspots-col-container">
+                    <div class="grid-cols-3 hotspots-col">
+                        <div class="hotspots">
+                            <div id="askthecommunity">
+                                <span class="support-topics-icon ask-the-community-svg"></span>
+                                <h3><span>Ask the Community</span></h3>
+                                <p><span class="c-description">Post questions and get answers from experts.</span></p>
+                                <a class="hx-red-button" href="https://community.adobe.com/">Ask now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-cols-3 hotspots-col">
+                        <div class="hotspots">
+                            <div id="contactus">
+                                <span class="support-topics-icon contact-us-svg"></span>
+                                <h3><span>Contact Us</span></h3>
+                                <p><span class="c-description">Real help from real people.</span></p>
+                                <a class="hx-red-button" href="/contact.html">Start now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-cols-3 last-col">
+                    <a class="hx-back-to-top" href="#" onclick="globalBackToTop()">^&nbsp;Back to top</a>
+
+                    <!-- feedback.html -->
+
+
+
+
+
+
+                    <div id="feedbackPod">
+                        <div id="helpful-pod">
+                            <div class="radiobuttons" role="radiogroup">
+                                <div id="helpfulspan">Was this page helpful?</div>
+
+                                <div id="yes-container" role="radio" aria-checked="false">
+                                    <a id="radioyes" href="javascript:showForm('yes');" class="radio-button">
+                                        <svg height="18" width="22" class="svg-radio-button" focusable="false">
+                                            <circle cx="10" cy="10" r="7.5" stroke="#BCBCBC" stroke-width="0.5" fill="#fff"/>
+                                        </svg>
+                                        <span id="yesspan">Yes</span>
+                                    </a>
+                                </div>
+                                <div id="no-container" role="radio" aria-checked="false">
+                                    <a id="radiono" href="javascript:showForm('no');" class="radio-button">
+                                        <svg height="18" width="22" class="svg-radio-button" focusable="false">
+                                            <circle cx="10" cy="10" r="7.5" stroke="#BCBCBC" stroke-width="0.5" fill="#fff"/>
+                                        </svg>
+                                        <span id="nospan">No</span>
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <div id="helpful" class="collapsed">
+                                <textarea id="feedbacktext" maxlength="250" placeholder="(Optional) Please let us know how we can improve this page." rows="5" cols="25" style="font-family:sans-serif;display:none"></textarea>
+                                <button tabindex="0" id="noCommentButton" onClick="setFeedBackFlag(true);submitFeedbackForm('no');" style="display:none">No comment</button>
+                                <button tabindex="0" id="submitButton" onClick="setFeedBackFlag(true);submitFeedbackForm('yes');" style="display:none">Submit</button>
+                                <div id="termsofuse" style="display:none">By clicking Submit, you accept the <a target="_blank" href="https://www.adobe.com/legal/terms.html">Adobe Terms of Use.</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+
+<script>
+    productIcon = "";
+</script>
+
+
+
+
+<div id="global-footer">
+
+
+
+
+
+
+
+    <div id="feds-footer"></div>
+
+
+</div>
+
+
+<div class="modalContainer static">
+
+
+    <div class="modal dexter-Author-Hide">
+        <div class="dexter-Modal_overlay mobile-place-center mobile-place-middle" data-conf-display="onHashChange" aria-modal="true" aria-labelledby="language-Navigation_heading" role="dialog">
+            <div class="dexter-Modal mobile-width-100 mobile-height-100 tablet-width-640 tablet-height-auto desktop-width-1024" id="languageNavigation">
+                <p id="languageNavigation-modalTitle" class="hide-all">Language Navigation</p>
+                <p id="languageNavigation-modalDescription" class="hide-all">Language Navigation</p>
+                <a href="#" class="dexter-CloseButton" aria-label="Close Region Selection" role="button"><i class="dexter-CloseButton_icon spectrum-close-circle-dark"></i></a>
+
+                <nav class="language-Navigation">
+                    <p id="language-Navigation_heading" class="language-Navigation_heading" role="heading" aria-level="2">Choose a region</p>
+                    <p class="language-Navigation_subheading">Selecting a region changes the language and/or content on Adobe.com.</p>
+                    <ul class="language-Navigation_region-List">
+                        <li><p role="heading" aria-level="3">Americas</p></li>
+
+                        <li>
+                            <a lang="pt-BR" data-href="https://helpx.adobe.com/content/help/br/pt/security/products/magento/apsb20-02.html" data-international-cookie="br">
+                                Brasil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-CA" data-href="https://helpx.adobe.com/content/help/ca/en/security/products/magento/apsb20-02.html" data-international-cookie="ca">
+                                Canada - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="fr-CA" data-href="https://helpx.adobe.com/content/help/ca/fr/security/products/magento/apsb20-02.html" data-international-cookie="ca_fr">
+                                Canada - Français
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="es-LA" data-href="https://helpx.adobe.com/content/help/la/es/security/products/magento/apsb20-02.html" data-international-cookie="la">
+                                Latinoamérica
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="es-MX" data-href="https://helpx.adobe.com/content/help/mx/es/security/products/magento/apsb20-02.html" data-international-cookie="mx">
+                                México
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="es-AR" data-href="https://helpx.adobe.com/content/help/ar/es/security/products/magento/apsb20-02.html" data-international-cookie="ar">
+                                Argentina
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="es-CO" data-href="https://helpx.adobe.com/content/help/co/es/security/products/magento/apsb20-02.html" data-international-cookie="co">
+                                Colombia
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="es-PE" data-href="https://helpx.adobe.com/content/help/pe/es/security/products/magento/apsb20-02.html" data-international-cookie="pe">
+                                Perú
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="es-CL" data-href="https://helpx.adobe.com/content/help/cl/es/security/products/magento/apsb20-02.html" data-international-cookie="cl">
+                                Chile
+                            </a>
+                        </li>
+
+                        <li>
+                            <a data-href="https://helpx.adobe.com/content/help/en/security/products/magento/apsb20-02.html" data-international-cookie="us">
+                                United States
+                            </a>
+                        </li>
+
+
+                        <li><p role="heading" aria-level="3">Asia Pacific</p></li>
+
+                        <li>
+                            <a lang="en-AU" data-href="https://helpx.adobe.com/content/help/au/en/security/products/magento/apsb20-02.html" data-international-cookie="au">
+                                Australia
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-HK" data-href="https://helpx.adobe.com/content/help/hk/en/security/products/magento/apsb20-02.html" data-international-cookie="hk_en">
+                                Hong Kong S.A.R. of China
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-IN" data-href="https://helpx.adobe.com/content/help/in/en/security/products/magento/apsb20-02.html" data-international-cookie="in">
+                                India - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-ID" data-href="https://helpx.adobe.com/content/help/id/en/security/products/magento/apsb20-02.html" data-international-cookie="id_en">
+                                Indonesia - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-MY" data-href="https://helpx.adobe.com/content/help/my/en/security/products/magento/apsb20-02.html" data-international-cookie="my_en">
+                                Malaysia - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-NZ" data-href="https://helpx.adobe.com/content/help/nz/en/security/products/magento/apsb20-02.html" data-international-cookie="nz">
+                                New Zealand
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-PH" data-href="https://helpx.adobe.com/content/help/ph/en/security/products/magento/apsb20-02.html" data-international-cookie="ph_en">
+                                Philippines - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-VN" data-href="https://helpx.adobe.com/content/help/vn/en/security/products/magento/apsb20-02.html" data-international-cookie="vn_en">
+                                Vietnam - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="zh-hans-CN" data-href="https://helpx.adobe.com/content/help/cn/zh-Hans/security/products/magento/apsb20-02.html" data-international-cookie="cn">
+                                中国
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="zh-hant-HK" data-href="https://helpx.adobe.com/content/help/hk/zh-Hant/security/products/magento/apsb20-02.html" data-international-cookie="hk_zh">
+                                中國香港特別行政區
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="zh-hant-TW" data-href="https://helpx.adobe.com/content/help/tw/zh-Hant/security/products/magento/apsb20-02.html" data-international-cookie="tw">
+                                台灣地區
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="ja-JP" data-href="https://helpx.adobe.com/content/help/jp/ja/security/products/magento/apsb20-02.html" data-international-cookie="jp">
+                                日本
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="in-ID" data-href="https://helpx.adobe.com/content/help/id/id/security/products/magento/apsb20-02.html" data-international-cookie="id_id">
+                                Indonesia
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="ms-MY" data-href="https://helpx.adobe.com/content/help/my/ms/security/products/magento/apsb20-02.html" data-international-cookie="my_ms">
+                                Malaysia
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="fil-PH" data-href="https://helpx.adobe.com/content/help/ph/fil/security/products/magento/apsb20-02.html" data-international-cookie="ph_fil">
+                                Pilipinas
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="vi-VN" data-href="https://helpx.adobe.com/content/help/vn/vi/security/products/magento/apsb20-02.html" data-international-cookie="vn_vi">
+                                Việt Nam
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="hi-IN" data-href="https://helpx.adobe.com/content/help/in/hi/security/products/magento/apsb20-02.html" data-international-cookie="in_hi">
+                                भारत
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="ko-KR" data-href="https://helpx.adobe.com/content/help/kr/ko/security/products/magento/apsb20-02.html" data-international-cookie="kr">
+                                한국
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-SG" data-href="https://helpx.adobe.com/content/help/sg/en/security/products/magento/apsb20-02.html" data-international-cookie="sg">
+                                Singapore
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-TH" data-href="https://helpx.adobe.com/content/help/th/en/security/products/magento/apsb20-02.html" data-international-cookie="th_en">
+                                Thailand - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="th-TH" data-href="https://helpx.adobe.com/content/help/th/th/security/products/magento/apsb20-02.html" data-international-cookie="th_th">
+                                ประเทศไทย
+                            </a>
+                        </li>
+
+
+                        <li><p role="heading" aria-level="3">Europe, Middle East and Africa</p></li>
+
+                        <li>
+                            <a lang="en-AFRICA" data-href="https://helpx.adobe.com/content/help/africa/en/security/products/magento/apsb20-02.html" data-international-cookie="africa">
+                                Africa - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="nl-BE" data-href="https://helpx.adobe.com/content/help/be/nl/security/products/magento/apsb20-02.html" data-international-cookie="be_nl">
+                                België - Nederlands
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="fr-BE" data-href="https://helpx.adobe.com/content/help/be/fr/security/products/magento/apsb20-02.html" data-international-cookie="be_fr">
+                                Belgique - Français
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-BE" data-href="https://helpx.adobe.com/content/help/be/en/security/products/magento/apsb20-02.html" data-international-cookie="be_en">
+                                Belgium - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="cs-CZ" data-href="https://helpx.adobe.com/content/help/cz/cs/security/products/magento/apsb20-02.html" data-international-cookie="cz">
+                                Česká republika
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="da-DK" data-href="https://helpx.adobe.com/content/help/dk/da/security/products/magento/apsb20-02.html" data-international-cookie="dk">
+                                Danmark
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="de-DE" data-href="https://helpx.adobe.com/content/help/de/de/security/products/magento/apsb20-02.html" data-international-cookie="de">
+                                Deutschland
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="et-EE" data-href="https://helpx.adobe.com/content/help/ee/et/security/products/magento/apsb20-02.html" data-international-cookie="ee">
+                                Eesti
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="es-ES" data-href="https://helpx.adobe.com/content/help/es/es/security/products/magento/apsb20-02.html" data-international-cookie="es">
+                                España
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="fr-FR" data-href="https://helpx.adobe.com/content/help/fr/fr/security/products/magento/apsb20-02.html" data-international-cookie="fr">
+                                France
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-GR" data-href="https://helpx.adobe.com/content/help/gr/en/security/products/magento/apsb20-02.html" data-international-cookie="gr_en">
+                                Greece - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-IE" data-href="https://helpx.adobe.com/content/help/ie/en/security/products/magento/apsb20-02.html" data-international-cookie="ie">
+                                Ireland
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-IL" data-href="https://helpx.adobe.com/content/help/il/en/security/products/magento/apsb20-02.html" data-international-cookie="il_en">
+                                Israel - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="it-IT" data-href="https://helpx.adobe.com/content/help/it/it/security/products/magento/apsb20-02.html" data-international-cookie="it">
+                                Italia
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="lv-LV" data-href="https://helpx.adobe.com/content/help/lv/lv/security/products/magento/apsb20-02.html" data-international-cookie="lv">
+                                Latvija
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="lt-LT" data-href="https://helpx.adobe.com/content/help/lt/lt/security/products/magento/apsb20-02.html" data-international-cookie="lt">
+                                Lietuva
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="de-LU" data-href="https://helpx.adobe.com/content/help/lu/de/security/products/magento/apsb20-02.html" data-international-cookie="lu_de">
+                                Luxembourg - Deutsch
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-LU" data-href="https://helpx.adobe.com/content/help/lu/en/security/products/magento/apsb20-02.html" data-international-cookie="lu_en">
+                                Luxembourg - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="fr-LU" data-href="https://helpx.adobe.com/content/help/lu/fr/security/products/magento/apsb20-02.html" data-international-cookie="lu_fr">
+                                Luxembourg - Français
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="hu-HU" data-href="https://helpx.adobe.com/content/help/hu/hu/security/products/magento/apsb20-02.html" data-international-cookie="hu">
+                                Magyarország
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-MENA" data-href="https://helpx.adobe.com/content/help/mena/en/security/products/magento/apsb20-02.html" data-international-cookie="mena_en">
+                                Middle East and North Africa - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="nl-NL" data-href="https://helpx.adobe.com/content/help/nl/nl/security/products/magento/apsb20-02.html" data-international-cookie="nl">
+                                Nederland
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="no-NO" data-href="https://helpx.adobe.com/content/help/no/no/security/products/magento/apsb20-02.html" data-international-cookie="no">
+                                Norge
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="de-AT" data-href="https://helpx.adobe.com/content/help/at/de/security/products/magento/apsb20-02.html" data-international-cookie="at">
+                                Österreich
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="pl-PL" data-href="https://helpx.adobe.com/content/help/pl/pl/security/products/magento/apsb20-02.html" data-international-cookie="pl">
+                                Polska
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="pt-PT" data-href="https://helpx.adobe.com/content/help/pt/pt/security/products/magento/apsb20-02.html" data-international-cookie="pt">
+                                Portugal
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="ro-RO" data-href="https://helpx.adobe.com/content/help/ro/ro/security/products/magento/apsb20-02.html" data-international-cookie="ro">
+                                România
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="de-CH" data-href="https://helpx.adobe.com/content/help/ch/de/security/products/magento/apsb20-02.html" data-international-cookie="ch_de">
+                                Schweiz
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="sl-SI" data-href="https://helpx.adobe.com/content/help/si/sl/security/products/magento/apsb20-02.html" data-international-cookie="si">
+                                Slovenija
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="sk-SK" data-href="https://helpx.adobe.com/content/help/sk/sk/security/products/magento/apsb20-02.html" data-international-cookie="sk">
+                                Slovensko
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="fr-CH" data-href="https://helpx.adobe.com/content/help/ch/fr/security/products/magento/apsb20-02.html" data-international-cookie="ch_fr">
+                                Suisse
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="fi-FI" data-href="https://helpx.adobe.com/content/help/fi/fi/security/products/magento/apsb20-02.html" data-international-cookie="fi">
+                                Suomi
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="it-CH" data-href="https://helpx.adobe.com/content/help/ch/it/security/products/magento/apsb20-02.html" data-international-cookie="ch_it">
+                                Svizzera
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="tr-TR" data-href="https://helpx.adobe.com/content/help/tr/tr/security/products/magento/apsb20-02.html" data-international-cookie="tr">
+                                Türkiye
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-UK" data-href="https://helpx.adobe.com/content/help/uk/en/security/products/magento/apsb20-02.html" data-international-cookie="uk">
+                                United Kingdom
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="bg-BG" data-href="https://helpx.adobe.com/content/help/bg/bg/security/products/magento/apsb20-02.html" data-international-cookie="bg">
+                                България
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="ru-RU" data-href="https://helpx.adobe.com/content/help/ru/ru/security/products/magento/apsb20-02.html" data-international-cookie="ru">
+                                Россия
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="uk-UA" data-href="https://helpx.adobe.com/content/help/ua/uk/security/products/magento/apsb20-02.html" data-international-cookie="ua">
+                                Україна
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="ar-MENA" data-href="https://helpx.adobe.com/content/help/mena/ar/security/products/magento/apsb20-02.html" data-international-cookie="mena_ar">
+                                الشرق الأوسط وشمال أفريقيا - اللغة العربية
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="iw-IL" data-href="https://helpx.adobe.com/content/help/il/he/security/products/magento/apsb20-02.html" data-international-cookie="il_he">
+                                ישראל - עברית
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="sv-SE" data-href="https://helpx.adobe.com/content/help/se/sv/security/products/magento/apsb20-02.html" data-international-cookie="se">
+                                Sverige
+                            </a>
+                        </li>
+
+
+
+
+                        <li>
+                            <a lang="en-SA" data-href="https://helpx.adobe.com/content/help/sa/en/security/products/magento/apsb20-02.html" data-international-cookie="sa_en">
+                                Saudi Arabia - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-AE" data-href="https://helpx.adobe.com/content/help/ae/en/security/products/magento/apsb20-02.html" data-international-cookie="ae_en">
+                                United Arab Emirates - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="ar-AE" data-href="https://helpx.adobe.com/content/help/ae/ar/security/products/magento/apsb20-02.html" data-international-cookie="ae_ar">
+                                الإمارات العربية المتحدة
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="ar-SA" data-href="https://helpx.adobe.com/content/help/sa/ar/security/products/magento/apsb20-02.html" data-international-cookie="sa_ar">
+                                المملكة العربية السعودية
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+
+
+    <locale-modal data-current-modal-version="v2" data-current-locale-text="Are you visiting adobe.com from outside your region?
+            Visit your regional site for more relevant pricing, promotions and events." data-current-locale-button-text="Continue to United States" data-current-locale-heading-message="This Adobe site doesn&#39;t match your location" data-current-locale-country="United States">
+    </locale-modal>
+
+
+    <script id="georouting-Head" data-geomap="{&#34;fallbackPage&#34;:&#34;support.html&#34;,&#34;currentLocale&#34;:&#34;us&#34;,&#34;locales&#34;:{&#34;hk_zh&#34;:{&#34;root&#34;:&#34;/content/help/hk/zh-Hant/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/hk/zh-Hant/&#34;},&#34;de&#34;:{&#34;root&#34;:&#34;/content/help/de/de/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/de/de/&#34;},&#34;mena_en&#34;:{&#34;root&#34;:&#34;/content/help/mena/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/mena/en/&#34;},&#34;tw&#34;:{&#34;root&#34;:&#34;/content/help/tw/zh-Hant/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/tw/zh-Hant/&#34;},&#34;pt&#34;:{&#34;root&#34;:&#34;/content/help/pt/pt/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/pt/pt/&#34;},&#34;dk&#34;:{&#34;root&#34;:&#34;/content/help/dk/da/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/dk/da/&#34;},&#34;lt&#34;:{&#34;root&#34;:&#34;/content/help/lt/lt/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/lt/lt/&#34;},&#34;lv&#34;:{&#34;root&#34;:&#34;/content/help/lv/lv/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/lv/lv/&#34;},&#34;ph_en&#34;:{&#34;root&#34;:&#34;/content/help/ph/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/ph/en/&#34;},&#34;ua&#34;:{&#34;root&#34;:&#34;/content/help/ua/uk/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/ua/uk/&#34;},&#34;th_th&#34;:{&#34;root&#34;:&#34;/content/help/th/th/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/th/th/&#34;},&#34;hu&#34;:{&#34;root&#34;:&#34;/content/help/hu/hu/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/hu/hu/&#34;},&#34;hk_en&#34;:{&#34;root&#34;:&#34;/content/help/hk/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/hk/en/&#34;},&#34;uk&#34;:{&#34;root&#34;:&#34;/content/help/uk/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/uk/en/&#34;},&#34;ie&#34;:{&#34;root&#34;:&#34;/content/help/ie/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/ie/en/&#34;},&#34;gr_en&#34;:{&#34;root&#34;:&#34;/content/help/gr/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/gr/en/&#34;},&#34;us&#34;:{&#34;root&#34;:&#34;/content/help/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/en/&#34;},&#34;ee&#34;:{&#34;root&#34;:&#34;/content/help/ee/et/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/ee/et/&#34;},&#34;in_hi&#34;:{&#34;root&#34;:&#34;/content/help/in/hi/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/in/hi/&#34;},&#34;my_ms&#34;:{&#34;root&#34;:&#34;/content/help/my/ms/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/my/ms/&#34;},&#34;africa&#34;:{&#34;root&#34;:&#34;/content/help/africa/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/africa/en/&#34;},&#34;ae_en&#34;:{&#34;root&#34;:&#34;/content/help/ae/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/ae/en/&#34;},&#34;vn_en&#34;:{&#34;root&#34;:&#34;/content/help/vn/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/vn/en/&#34;},&#34;my_en&#34;:{&#34;root&#34;:&#34;/content/help/my/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/my/en/&#34;},&#34;in&#34;:{&#34;root&#34;:&#34;/content/help/in/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/in/en/&#34;},&#34;vn_vi&#34;:{&#34;root&#34;:&#34;/content/help/vn/vi/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/vn/vi/&#34;},&#34;ae_ar&#34;:{&#34;root&#34;:&#34;/content/help/ae/ar/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/ae/ar/&#34;},&#34;it&#34;:{&#34;root&#34;:&#34;/content/help/it/it/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/it/it/&#34;},&#34;mx&#34;:{&#34;root&#34;:&#34;/content/help/mx/es/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/mx/es/&#34;},&#34;be_nl&#34;:{&#34;root&#34;:&#34;/content/help/be/nl/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/be/nl/&#34;},&#34;es&#34;:{&#34;root&#34;:&#34;/content/help/es/es/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/es/es/&#34;},&#34;be_en&#34;:{&#34;root&#34;:&#34;/content/help/be/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/be/en/&#34;},&#34;ar&#34;:{&#34;root&#34;:&#34;/content/help/ar/es/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/ar/es/&#34;},&#34;at&#34;:{&#34;root&#34;:&#34;/content/help/at/de/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/at/de/&#34;},&#34;au&#34;:{&#34;root&#34;:&#34;/content/help/au/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/au/en/&#34;},&#34;lu_en&#34;:{&#34;root&#34;:&#34;/content/help/lu/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/lu/en/&#34;},&#34;ch_de&#34;:{&#34;root&#34;:&#34;/content/help/ch/de/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/ch/de/&#34;},&#34;sa_en&#34;:{&#34;root&#34;:&#34;/content/help/sa/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/sa/en/&#34;},&#34;mena_ar&#34;:{&#34;root&#34;:&#34;/content/help/mena/ar/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/mena/ar/&#34;},&#34;id_en&#34;:{&#34;root&#34;:&#34;/content/help/id/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/id/en/&#34;},&#34;ro&#34;:{&#34;root&#34;:&#34;/content/help/ro/ro/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/ro/ro/&#34;},&#34;nl&#34;:{&#34;root&#34;:&#34;/content/help/nl/nl/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/nl/nl/&#34;},&#34;il_en&#34;:{&#34;root&#34;:&#34;/content/help/il/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/il/en/&#34;},&#34;sa_ar&#34;:{&#34;root&#34;:&#34;/content/help/sa/ar/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/sa/ar/&#34;},&#34;no&#34;:{&#34;root&#34;:&#34;/content/help/no/no/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/no/no/&#34;},&#34;fi&#34;:{&#34;root&#34;:&#34;/content/help/fi/fi/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/fi/fi/&#34;},&#34;ru&#34;:{&#34;root&#34;:&#34;/content/help/ru/ru/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/ru/ru/&#34;},&#34;ch_fr&#34;:{&#34;root&#34;:&#34;/content/help/ch/fr/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/ch/fr/&#34;},&#34;bg&#34;:{&#34;root&#34;:&#34;/content/help/bg/bg/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/bg/bg/&#34;},&#34;jp&#34;:{&#34;root&#34;:&#34;/content/help/jp/ja/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/jp/ja/&#34;},&#34;th_en&#34;:{&#34;root&#34;:&#34;/content/help/th/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/th/en/&#34;},&#34;ph_fil&#34;:{&#34;root&#34;:&#34;/content/help/ph/fil/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/ph/fil/&#34;},&#34;id_id&#34;:{&#34;root&#34;:&#34;/content/help/id/id/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/id/id/&#34;},&#34;fr&#34;:{&#34;root&#34;:&#34;/content/help/fr/fr/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/fr/fr/&#34;},&#34;nz&#34;:{&#34;root&#34;:&#34;/content/help/nz/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/nz/en/&#34;},&#34;br&#34;:{&#34;root&#34;:&#34;/content/help/br/pt/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/br/pt/&#34;},&#34;se&#34;:{&#34;root&#34;:&#34;/content/help/se/sv/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/se/sv/&#34;},&#34;sg&#34;:{&#34;root&#34;:&#34;/content/help/sg/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/sg/en/&#34;},&#34;si&#34;:{&#34;root&#34;:&#34;/content/help/si/sl/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/si/sl/&#34;},&#34;sk&#34;:{&#34;root&#34;:&#34;/content/help/sk/sk/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/sk/sk/&#34;},&#34;be_fr&#34;:{&#34;root&#34;:&#34;/content/help/be/fr/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/be/fr/&#34;},&#34;ca&#34;:{&#34;root&#34;:&#34;/content/help/ca/en/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/ca/en/&#34;},&#34;lu_de&#34;:{&#34;root&#34;:&#34;/content/help/lu/de/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/lu/de/&#34;},&#34;il_he&#34;:{&#34;root&#34;:&#34;/content/help/il/he/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/il/he/&#34;},&#34;ch_it&#34;:{&#34;root&#34;:&#34;/content/help/ch/it/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/ch/it/&#34;},&#34;kr&#34;:{&#34;root&#34;:&#34;/content/help/kr/ko/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/kr/ko/&#34;},&#34;cl&#34;:{&#34;root&#34;:&#34;/content/help/cl/es/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/cl/es/&#34;},&#34;lu_fr&#34;:{&#34;root&#34;:&#34;/content/help/lu/fr/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/lu/fr/&#34;},&#34;cn&#34;:{&#34;root&#34;:&#34;/content/help/cn/zh-Hans/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/cn/zh-Hans/&#34;},&#34;co&#34;:{&#34;root&#34;:&#34;/content/help/co/es/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/co/es/&#34;},&#34;ca_fr&#34;:{&#34;root&#34;:&#34;/content/help/ca/fr/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/ca/fr/&#34;},&#34;la&#34;:{&#34;root&#34;:&#34;/content/help/la/es/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/la/es/&#34;},&#34;pe&#34;:{&#34;root&#34;:&#34;/content/help/pe/es/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/pe/es/&#34;},&#34;cz&#34;:{&#34;root&#34;:&#34;/content/help/cz/cs/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/cz/cs/&#34;},&#34;pl&#34;:{&#34;root&#34;:&#34;/content/help/pl/pl/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/pl/pl/&#34;},&#34;tr&#34;:{&#34;root&#34;:&#34;/content/help/tr/tr/&#34;,&#34;target&#34;:true,&#34;externalizedRoot&#34;:&#34;https://helpx.adobe.com/content/help/tr/tr/&#34;}},&#34;referrers&#34;:{&#34;&#39;google.com.sa&#39;: [&#39;mena_ar&#39;, &#39;mena_en&#39;]&#34;:[&#34;ae_en&#34;,&#34;sa_en&#34;],&#34; &#39;google.com.co&#39;: &#39;la&#39;&#34;:[&#34;cl&#34;]},&#34;targetPage&#34;:&#34;security/products/magento/apsb20-02.html&#34;,&#34;localeServletPath&#34;:&#34;/etc/dexter.helpx/public/localeContent&#34;,&#34;contentRootPath&#34;:&#34;/content/help&#34;}" data-georouting-ims-country="true"></script>
+
+</div>
+
+
+
+
+<div id="ucv3-modal" data-ucv3url="https://commerce.adobe.com/store/segmentation?cli=helpx&amp;co=US&amp;lang=en&amp;pa=ccsn_direct_individual" data-trialucv3url="https://commerce.adobe.com/store/segmentation?cli=helpx&amp;co=US&amp;lang=en&amp;pa=ccsn_direct_individual&amp;ot=TRIAL" data-countrycode="US"></div>
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/etc.dexter.dexterlibs/dexter/clientlibs/base/reactumd.fp-738017f044bbd4fb0c28e92918ca68b3.js"></script>
+
+
+
+
+<script type="text/javascript" src="/etc.dexter.dexterlibs/dexter/clientlibs/base/publish.fp-4304f5152f798b8cd5df69426d598de7.js"></script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/etc.dexter.dexterlibs/helpx/clientBundles/helpxTools/clientlibs.fp-852f86484d23c9630d77d74a8ac95de7.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/etc.dexter.dexterlibs/helpx/clientBundles/asdeSearchBar/clientlibs.fp-77dc1b76f003f0820d998af894ac0ca6.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/etc.dexter.dexterlibs/help/components/pages/article-3/clientlibs.fp-063d23eacd93ce6406742f68a41fde5d.js"></script>
+
+
+
+
+
+
+<!-- /* templates use this to add/override scripts at the end of the page */ -->
+
+
+
+
+<!-- /* dexter models */ -->
+
+
+
+<div style="display:none" class="modalContainer static">
+
+
+
+    <div class="modal dexter-Author-Hide">
+        <div class="dexter-Modal_overlay mobile-place-center mobile-place-middle" data-conf-display="onHashChange" aria-modal="true" aria-labelledby="language-Navigation_heading" role="dialog">
+            <div class="dexter-Modal mobile-width-100 mobile-height-100 tablet-width-640 tablet-height-auto desktop-width-1024" id="languageNavigation">
+                <p id="languageNavigation-modalTitle" class="hide-all">Language Navigation</p>
+                <p id="languageNavigation-modalDescription" class="hide-all">Language Navigation</p>
+                <a href="#" class="dexter-CloseButton" aria-label="Close Region Selection" role="button"><i class="dexter-CloseButton_icon spectrum-close-circle-dark"></i></a>
+
+                <nav class="language-Navigation">
+                    <p id="language-Navigation_heading" class="language-Navigation_heading" role="heading" aria-level="2">Choose a region</p>
+                    <p class="language-Navigation_subheading">Selecting a region changes the language and/or content on Adobe.com.</p>
+                    <ul class="language-Navigation_region-List">
+                        <li><p role="heading" aria-level="3">Americas</p></li>
+
+                        <li>
+                            <a lang="pt-BR" data-href="https://helpx.adobe.com/content/help/br/pt/security/products/magento/apsb20-02.html" data-international-cookie="br">
+                                Brasil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-CA" data-href="https://helpx.adobe.com/content/help/ca/en/security/products/magento/apsb20-02.html" data-international-cookie="ca">
+                                Canada - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="fr-CA" data-href="https://helpx.adobe.com/content/help/ca/fr/security/products/magento/apsb20-02.html" data-international-cookie="ca_fr">
+                                Canada - Français
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="es-LA" data-href="https://helpx.adobe.com/content/help/la/es/security/products/magento/apsb20-02.html" data-international-cookie="la">
+                                Latinoamérica
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="es-MX" data-href="https://helpx.adobe.com/content/help/mx/es/security/products/magento/apsb20-02.html" data-international-cookie="mx">
+                                México
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="es-AR" data-href="https://helpx.adobe.com/content/help/ar/es/security/products/magento/apsb20-02.html" data-international-cookie="ar">
+                                Argentina
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="es-CO" data-href="https://helpx.adobe.com/content/help/co/es/security/products/magento/apsb20-02.html" data-international-cookie="co">
+                                Colombia
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="es-PE" data-href="https://helpx.adobe.com/content/help/pe/es/security/products/magento/apsb20-02.html" data-international-cookie="pe">
+                                Perú
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="es-CL" data-href="https://helpx.adobe.com/content/help/cl/es/security/products/magento/apsb20-02.html" data-international-cookie="cl">
+                                Chile
+                            </a>
+                        </li>
+
+                        <li>
+                            <a data-href="https://helpx.adobe.com/content/help/en/security/products/magento/apsb20-02.html" data-international-cookie="us">
+                                United States
+                            </a>
+                        </li>
+
+
+                        <li><p role="heading" aria-level="3">Asia Pacific</p></li>
+
+                        <li>
+                            <a lang="en-AU" data-href="https://helpx.adobe.com/content/help/au/en/security/products/magento/apsb20-02.html" data-international-cookie="au">
+                                Australia
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-HK" data-href="https://helpx.adobe.com/content/help/hk/en/security/products/magento/apsb20-02.html" data-international-cookie="hk_en">
+                                Hong Kong S.A.R. of China
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-IN" data-href="https://helpx.adobe.com/content/help/in/en/security/products/magento/apsb20-02.html" data-international-cookie="in">
+                                India - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-ID" data-href="https://helpx.adobe.com/content/help/id/en/security/products/magento/apsb20-02.html" data-international-cookie="id_en">
+                                Indonesia - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-MY" data-href="https://helpx.adobe.com/content/help/my/en/security/products/magento/apsb20-02.html" data-international-cookie="my_en">
+                                Malaysia - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-NZ" data-href="https://helpx.adobe.com/content/help/nz/en/security/products/magento/apsb20-02.html" data-international-cookie="nz">
+                                New Zealand
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-PH" data-href="https://helpx.adobe.com/content/help/ph/en/security/products/magento/apsb20-02.html" data-international-cookie="ph_en">
+                                Philippines - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-VN" data-href="https://helpx.adobe.com/content/help/vn/en/security/products/magento/apsb20-02.html" data-international-cookie="vn_en">
+                                Vietnam - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="zh-hans-CN" data-href="https://helpx.adobe.com/content/help/cn/zh-Hans/security/products/magento/apsb20-02.html" data-international-cookie="cn">
+                                中国
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="zh-hant-HK" data-href="https://helpx.adobe.com/content/help/hk/zh-Hant/security/products/magento/apsb20-02.html" data-international-cookie="hk_zh">
+                                中國香港特別行政區
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="zh-hant-TW" data-href="https://helpx.adobe.com/content/help/tw/zh-Hant/security/products/magento/apsb20-02.html" data-international-cookie="tw">
+                                台灣地區
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="ja-JP" data-href="https://helpx.adobe.com/content/help/jp/ja/security/products/magento/apsb20-02.html" data-international-cookie="jp">
+                                日本
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="in-ID" data-href="https://helpx.adobe.com/content/help/id/id/security/products/magento/apsb20-02.html" data-international-cookie="id_id">
+                                Indonesia
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="ms-MY" data-href="https://helpx.adobe.com/content/help/my/ms/security/products/magento/apsb20-02.html" data-international-cookie="my_ms">
+                                Malaysia
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="fil-PH" data-href="https://helpx.adobe.com/content/help/ph/fil/security/products/magento/apsb20-02.html" data-international-cookie="ph_fil">
+                                Pilipinas
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="vi-VN" data-href="https://helpx.adobe.com/content/help/vn/vi/security/products/magento/apsb20-02.html" data-international-cookie="vn_vi">
+                                Việt Nam
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="hi-IN" data-href="https://helpx.adobe.com/content/help/in/hi/security/products/magento/apsb20-02.html" data-international-cookie="in_hi">
+                                भारत
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="ko-KR" data-href="https://helpx.adobe.com/content/help/kr/ko/security/products/magento/apsb20-02.html" data-international-cookie="kr">
+                                한국
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-SG" data-href="https://helpx.adobe.com/content/help/sg/en/security/products/magento/apsb20-02.html" data-international-cookie="sg">
+                                Singapore
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-TH" data-href="https://helpx.adobe.com/content/help/th/en/security/products/magento/apsb20-02.html" data-international-cookie="th_en">
+                                Thailand - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="th-TH" data-href="https://helpx.adobe.com/content/help/th/th/security/products/magento/apsb20-02.html" data-international-cookie="th_th">
+                                ประเทศไทย
+                            </a>
+                        </li>
+
+
+                        <li><p role="heading" aria-level="3">Europe, Middle East and Africa</p></li>
+
+                        <li>
+                            <a lang="en-AFRICA" data-href="https://helpx.adobe.com/content/help/africa/en/security/products/magento/apsb20-02.html" data-international-cookie="africa">
+                                Africa - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="nl-BE" data-href="https://helpx.adobe.com/content/help/be/nl/security/products/magento/apsb20-02.html" data-international-cookie="be_nl">
+                                België - Nederlands
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="fr-BE" data-href="https://helpx.adobe.com/content/help/be/fr/security/products/magento/apsb20-02.html" data-international-cookie="be_fr">
+                                Belgique - Français
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-BE" data-href="https://helpx.adobe.com/content/help/be/en/security/products/magento/apsb20-02.html" data-international-cookie="be_en">
+                                Belgium - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="cs-CZ" data-href="https://helpx.adobe.com/content/help/cz/cs/security/products/magento/apsb20-02.html" data-international-cookie="cz">
+                                Česká republika
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="da-DK" data-href="https://helpx.adobe.com/content/help/dk/da/security/products/magento/apsb20-02.html" data-international-cookie="dk">
+                                Danmark
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="de-DE" data-href="https://helpx.adobe.com/content/help/de/de/security/products/magento/apsb20-02.html" data-international-cookie="de">
+                                Deutschland
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="et-EE" data-href="https://helpx.adobe.com/content/help/ee/et/security/products/magento/apsb20-02.html" data-international-cookie="ee">
+                                Eesti
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="es-ES" data-href="https://helpx.adobe.com/content/help/es/es/security/products/magento/apsb20-02.html" data-international-cookie="es">
+                                España
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="fr-FR" data-href="https://helpx.adobe.com/content/help/fr/fr/security/products/magento/apsb20-02.html" data-international-cookie="fr">
+                                France
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-GR" data-href="https://helpx.adobe.com/content/help/gr/en/security/products/magento/apsb20-02.html" data-international-cookie="gr_en">
+                                Greece - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-IE" data-href="https://helpx.adobe.com/content/help/ie/en/security/products/magento/apsb20-02.html" data-international-cookie="ie">
+                                Ireland
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-IL" data-href="https://helpx.adobe.com/content/help/il/en/security/products/magento/apsb20-02.html" data-international-cookie="il_en">
+                                Israel - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="it-IT" data-href="https://helpx.adobe.com/content/help/it/it/security/products/magento/apsb20-02.html" data-international-cookie="it">
+                                Italia
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="lv-LV" data-href="https://helpx.adobe.com/content/help/lv/lv/security/products/magento/apsb20-02.html" data-international-cookie="lv">
+                                Latvija
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="lt-LT" data-href="https://helpx.adobe.com/content/help/lt/lt/security/products/magento/apsb20-02.html" data-international-cookie="lt">
+                                Lietuva
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="de-LU" data-href="https://helpx.adobe.com/content/help/lu/de/security/products/magento/apsb20-02.html" data-international-cookie="lu_de">
+                                Luxembourg - Deutsch
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-LU" data-href="https://helpx.adobe.com/content/help/lu/en/security/products/magento/apsb20-02.html" data-international-cookie="lu_en">
+                                Luxembourg - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="fr-LU" data-href="https://helpx.adobe.com/content/help/lu/fr/security/products/magento/apsb20-02.html" data-international-cookie="lu_fr">
+                                Luxembourg - Français
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="hu-HU" data-href="https://helpx.adobe.com/content/help/hu/hu/security/products/magento/apsb20-02.html" data-international-cookie="hu">
+                                Magyarország
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-MENA" data-href="https://helpx.adobe.com/content/help/mena/en/security/products/magento/apsb20-02.html" data-international-cookie="mena_en">
+                                Middle East and North Africa - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="nl-NL" data-href="https://helpx.adobe.com/content/help/nl/nl/security/products/magento/apsb20-02.html" data-international-cookie="nl">
+                                Nederland
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="no-NO" data-href="https://helpx.adobe.com/content/help/no/no/security/products/magento/apsb20-02.html" data-international-cookie="no">
+                                Norge
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="de-AT" data-href="https://helpx.adobe.com/content/help/at/de/security/products/magento/apsb20-02.html" data-international-cookie="at">
+                                Österreich
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="pl-PL" data-href="https://helpx.adobe.com/content/help/pl/pl/security/products/magento/apsb20-02.html" data-international-cookie="pl">
+                                Polska
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="pt-PT" data-href="https://helpx.adobe.com/content/help/pt/pt/security/products/magento/apsb20-02.html" data-international-cookie="pt">
+                                Portugal
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="ro-RO" data-href="https://helpx.adobe.com/content/help/ro/ro/security/products/magento/apsb20-02.html" data-international-cookie="ro">
+                                România
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="de-CH" data-href="https://helpx.adobe.com/content/help/ch/de/security/products/magento/apsb20-02.html" data-international-cookie="ch_de">
+                                Schweiz
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="sl-SI" data-href="https://helpx.adobe.com/content/help/si/sl/security/products/magento/apsb20-02.html" data-international-cookie="si">
+                                Slovenija
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="sk-SK" data-href="https://helpx.adobe.com/content/help/sk/sk/security/products/magento/apsb20-02.html" data-international-cookie="sk">
+                                Slovensko
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="fr-CH" data-href="https://helpx.adobe.com/content/help/ch/fr/security/products/magento/apsb20-02.html" data-international-cookie="ch_fr">
+                                Suisse
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="fi-FI" data-href="https://helpx.adobe.com/content/help/fi/fi/security/products/magento/apsb20-02.html" data-international-cookie="fi">
+                                Suomi
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="it-CH" data-href="https://helpx.adobe.com/content/help/ch/it/security/products/magento/apsb20-02.html" data-international-cookie="ch_it">
+                                Svizzera
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="tr-TR" data-href="https://helpx.adobe.com/content/help/tr/tr/security/products/magento/apsb20-02.html" data-international-cookie="tr">
+                                Türkiye
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-UK" data-href="https://helpx.adobe.com/content/help/uk/en/security/products/magento/apsb20-02.html" data-international-cookie="uk">
+                                United Kingdom
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="bg-BG" data-href="https://helpx.adobe.com/content/help/bg/bg/security/products/magento/apsb20-02.html" data-international-cookie="bg">
+                                България
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="ru-RU" data-href="https://helpx.adobe.com/content/help/ru/ru/security/products/magento/apsb20-02.html" data-international-cookie="ru">
+                                Россия
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="uk-UA" data-href="https://helpx.adobe.com/content/help/ua/uk/security/products/magento/apsb20-02.html" data-international-cookie="ua">
+                                Україна
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="ar-MENA" data-href="https://helpx.adobe.com/content/help/mena/ar/security/products/magento/apsb20-02.html" data-international-cookie="mena_ar">
+                                الشرق الأوسط وشمال أفريقيا - اللغة العربية
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="iw-IL" data-href="https://helpx.adobe.com/content/help/il/he/security/products/magento/apsb20-02.html" data-international-cookie="il_he">
+                                ישראל - עברית
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="sv-SE" data-href="https://helpx.adobe.com/content/help/se/sv/security/products/magento/apsb20-02.html" data-international-cookie="se">
+                                Sverige
+                            </a>
+                        </li>
+
+
+
+
+                        <li>
+                            <a lang="en-SA" data-href="https://helpx.adobe.com/content/help/sa/en/security/products/magento/apsb20-02.html" data-international-cookie="sa_en">
+                                Saudi Arabia - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="en-AE" data-href="https://helpx.adobe.com/content/help/ae/en/security/products/magento/apsb20-02.html" data-international-cookie="ae_en">
+                                United Arab Emirates - English
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="ar-AE" data-href="https://helpx.adobe.com/content/help/ae/ar/security/products/magento/apsb20-02.html" data-international-cookie="ae_ar">
+                                الإمارات العربية المتحدة
+                            </a>
+                        </li>
+
+                        <li>
+                            <a lang="ar-SA" data-href="https://helpx.adobe.com/content/help/sa/ar/security/products/magento/apsb20-02.html" data-international-cookie="sa_ar">
+                                المملكة العربية السعودية
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <locale-modal data-current-modal-version="v2" data-current-locale-text="Are you visiting adobe.com from outside your region?
+            Visit your regional site for more relevant pricing, promotions and events." data-current-locale-button-text="Continue to United States" data-current-locale-heading-message="This Adobe site doesn&#39;t match your location" data-current-locale-country="United States">
+    </locale-modal>
+
+
+
+</div>
+
+
+
+<script>
+    var adobeid = {
+        env: '//ims-na1.adobelogin.com',
+        environment: 'prod',
+        jumpToken: {
+            api: '/ims/jumptoken/v1',
+        },
+        client_id: 'AdobeSupport1',
+        scope: 'AdobeID,openid,gnav,creative_cloud,read_organizations,additional_info.projectedProductContext,additional_info.roles,pps.read,firefly_api,account_cluster.read',
+        uses_redirect_mode: true,
+        locale: 'en_US',
+        uses_modal_mode: false,
+        autoValidateToken: true,
+        api_parameters: {
+            authorize: {
+                state: {
+                    ac: 'AdobeSupport1',
+                }
+            }
+        },
+        redirect_uri: window.location.url,
+        onReady: function () {
+            window.dispatchEvent(new Event('dexter:IMSReady'));
+        }
+    };
+</script>
+<script src="https://auth.services.adobe.com/imslib/imslib.min.js"></script>
+
+
+
+
+
+
+<script>
+    var privateBeta = "";
+    var privateFeaturePack = "";
+    var admittedDomains = "";
+    // new line
+    document.addEventListener("DOMContentLoaded", function () {
+        if (privateBeta || (privateFeaturePack)) {
+            page.showPrivateBetaOrFeaturePack(privateBeta, privateFeaturePack, admittedDomains);
+        }
+    });
+</script>
+
+
+
+
+
+<script>
+    window.dexter.checkout = window.dexter.checkout || {};
+    window.dexter.checkout.ims = {
+        clientId: {
+            ucv2: 'unified_checkout_client',
+            ucv3: 'unified_checkout_client_v3'
+        },
+        targetScope: {
+            ucv2: 'AdobeID,openid,additional_info.roles,additional_info.vat_id,additional_info.dob,update_profile.countryCode',
+            ucv3: 'AdobeID,openid,additional_info.roles,additional_info.vat_id,additional_info.dob,update_profile.countryCode, additional_info.authenticatingAccount'
+        },
+        timeout: ''
+    }
+</script>
+
+
+
+</body>
+
+</html>

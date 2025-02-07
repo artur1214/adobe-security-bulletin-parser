@@ -1,0 +1,7 @@
+dist
+.env
+.idea
+tsconfig.json
+res
+node_modules
+logs

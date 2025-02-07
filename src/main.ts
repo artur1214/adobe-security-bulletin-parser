@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { createObjectCsvWriter } from 'csv-writer';
-import cheerio from 'cheerio';
+import * as cheerio from 'cheerio';
 import logger from './logger';
 import { Vulnerability, TableRow } from './types/types'; // Updated import path
 import dotenv from 'dotenv';
@@ -27,7 +27,7 @@ ensureDirectoryExists(RESULT_DIR);
 const BASE_URL = 'https://helpx.adobe.com/security/products/magento.html';
 
 // Function to extract main data from a table
-function getMainData(table: cheerio.Element, $: cheerio.Root): Partial<Vulnerability> {
+export function getMainData(table: cheerio.Element, $: cheerio.Root): Partial<Vulnerability> {
     const row = $(table).find('tr:last td');
     const bulletinId = $(row[0]).text().trim();
     const datePublished = $(row[1]).text().trim();
@@ -41,14 +41,16 @@ function getMainData(table: cheerio.Element, $: cheerio.Root): Partial<Vulnerabi
 }
 
 // Parse "Affected Versions" table
-function parseAffectedVersions($: cheerio.Root): Record<string, string>[] {
+export function parseAffectedVersions($: cheerio.Root): Record<string, string>[] {
     const affectedVersions: Record<string, string>[] = [];
     const affectedTable = $('h2:contains("Affected Versions")').parent().parent().next('div').find('table');
     //console.log('Affected Table, ', affectedTable.length)
     if (affectedTable.length) {
         const rows = affectedTable.find('tr');
-        const keys = [...$(rows[0]).find('th')].map((th) => $(th).text().trim());
-
+        let keys = [...$(rows[0]).find('th')].map((th) => $(th).text().trim());
+        if (!keys.length) {
+            keys = [...$(rows[0]).find('td')].map((th) => $(th).text().trim());
+        }
         for (let i = 1; i < rows.length; i++) {
             const values = [...$(rows[i]).find('td')].map((td) => $(td).text().trim());
             const entry: Record<string, string> = {};
@@ -63,14 +65,16 @@ function parseAffectedVersions($: cheerio.Root): Record<string, string>[] {
 }
 
 // Parse "Solution" table
-function parseSolution($: cheerio.Root): Record<string, string>[] {
+export function parseSolution($: cheerio.Root): Record<string, string>[] {
     const solutions: Record<string, string>[] = [];
     const solutionTable = $('h2:contains("Solution")').parent().parent().next('div').next('div').find('table');
 
     if (solutionTable.length) {
         const rows = solutionTable.find('tr');
-        const keys = [...$(rows[0]).find('th')].map((th) => $(th).text().trim());
-
+        let keys = [...$(rows[0]).find('th')].map((th) => $(th).text().trim());
+        if (!keys.length) {
+            keys = [...$(rows[0]).find('td')].map((th) => $(th).text().trim());
+        }
         for (let i = 1; i < rows.length; i++) {
             const values = [...$(rows[i]).find('td')].map((td) => $(td).text().trim());
             const entry: Record<string, string> = {};
@@ -85,7 +89,7 @@ function parseSolution($: cheerio.Root): Record<string, string>[] {
 }
 
 // Parse a single vulnerability page
-async function parseOne(url: string): Promise<Partial<Vulnerability>> {
+export async function parseOne(url: string): Promise<Partial<Vulnerability>> {
     try {
         if (!url) {
             logger.warn('URL is empty');
@@ -243,5 +247,7 @@ async function main() {
         handleFetchError(error, 'main');
     }
 }
-
-main();
+if (require.main === module) {
+    main();
+}
+// main();
