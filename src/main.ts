@@ -5,7 +5,7 @@ import * as cheerio from 'cheerio';
 import logger from './logger';
 import {Bulletin, TableRow, VulnerabilityRecord} from './types/types'; // Updated import path
 import dotenv from 'dotenv';
-import * as crypto from "node:crypto";
+import { webcrypto } from "node:crypto";
 // Load environment variables from .env file
 dotenv.config();
 
@@ -310,7 +310,7 @@ async function getObjectHash(obj: VulnerabilityRecord) {
     const data = encoder.encode(str);
 
     // Создаем хэш с использованием SHA-256
-    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    const hashBuffer = await webcrypto.subtle.digest('SHA-256', data);
 
     // Преобразуем хэш в шестнадцатеричную строку
     const hashArray = Array.from(new Uint8Array(hashBuffer));
